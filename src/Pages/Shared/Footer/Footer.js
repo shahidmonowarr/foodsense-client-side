@@ -41,13 +41,11 @@ const Footer = () => {
                                 <h4><i className="fas fa-user-edit"></i> News & tips</h4> <hr />
                                 <div className="news">
                                     <div className="">
-                                        <h6>Amazing Decadent Pecan PIE Best Cake</h6>
-                                        <p>01th dec 2021</p>
+                                        <h6>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum, suscipit?</h6>
                                         <hr />
                                     </div>
 
-                                    <div className=""> <h6>Cancer treatment for poor peoples</h6>
-                                        <p>01th dec 2021</p>
+                                    <div className=""> <h6>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum, suscipit?</h6>
                                     </div>
 
                                 </div>
