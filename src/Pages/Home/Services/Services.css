@@ -1,0 +1,31 @@
+.service-col{
+    margin: 15px;
+    padding: 15px 15px;
+    background-color: goldenrod;
+    border-radius: 20px;
+    color: rgb(26, 22, 22);
+}
+
+.service-col:hover{
+    background-color: rgb(255, 255, 255);
+    color: black;
+    transition: 0.8s;
+}
+
+.service-col h2{
+    font-size: 2.2em;
+    font-weight: 700;
+}
+
+.service-col h3{
+    font-size: 2.4em;
+    font-weight: 700;
+    color: rgb(45, 107, 45);
+}
+
+.service-col h6{
+    font-weight: 700;
+    color: rgb(54, 48, 48);
+    font-size: 1.2em;
+
+}

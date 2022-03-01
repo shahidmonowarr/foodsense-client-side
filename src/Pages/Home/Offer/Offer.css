@@ -1,0 +1,71 @@
+.offer-col1{
+    position: relative;
+    background: url(https://i.ibb.co/mvpLTXP/2.png);
+    min-height: 60vh;
+    padding-top:20px ;
+    background-size: cover;
+    background-position: center;
+    margin: 0 10px;
+    border-radius: 20px;
+    transform: rotate(0deg);
+}
+
+.offer-col2{
+    position: relative;
+    background: url(
+    https://i.ibb.co/cgVPgbN/3.png);
+    min-height: 60vh;
+    padding-top:20px ;
+    background-size: cover;
+    background-position: center;
+    margin: 0 10px;
+    border-radius: 20px;
+    transform: rotate(0deg);
+}
+.offer-col3{
+    position: relative;
+    background: url(https://i.ibb.co/VJhjjmr/4.png
+    );
+    min-height: 60vh;
+    padding-top:20px ;
+    background-size: cover;
+    background-position: center;
+    margin: 0 10px;
+    border-radius: 20px;
+    transform: rotate(0deg);
+}
+
+.offer-col1 h2, .offer-col3 h2{
+    color: goldenrod;
+    font-size:2.2em;
+    font-weight: 800;
+}
+.offer-col1 h6, .offer-col3 h6{
+    color: rgb(219, 219, 219);
+    font-size:1.2em;
+    font-weight: 800;
+}
+
+.offer-col2 h2{
+    color: rgb(0, 0, 0);
+    font-size:2.2em;
+    font-weight: 800;
+}
+
+.offer-col2 h6{
+    color: rgb(65, 61, 61);
+    font-size:1.2em;
+    font-weight: 800;
+}
+.offer-col1:hover{
+    transform: scale(1.1);
+    transition: 0.8s;
+}
+.offer-col2:hover{
+    transform: scale(1.1);
+    transition: 0.8s;
+}
+.offer-col3:hover{
+    transform: scale(1.1);
+    transition: 0.8s;
+}

@@ -1,0 +1,42 @@
+.banner{
+    position: relative;
+    background: url(https://i.ibb.co/gwLnHkh/Optimized-top-view-burgers-fries-with-pickles-copy-space.jpg);
+    min-height: 90vh;
+    background-size: cover;
+    background-position: center;
+    padding: 250px 0 200px;
+}
+
+.banner-title{
+    margin: 1em 0 0;
+    padding: 0;
+    text-transform: uppercase;
+    font-size: 2.8em;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    line-height: 1.5em;
+    font-weight: 800;
+}
+
+.banner p{
+    padding: 5px;
+    color: rgb(235, 230, 230);
+}
+
+.btn1{
+    display: inline-block;
+    margin: 1em 0 0;
+    background-color: goldenrod;
+    color: white;
+    font-weight: 1000;
+    text-transform: uppercase;
+    border: none;
+    padding: 1em 1.5em;
+    border-radius: 20px;
+}
+
+.btn1:hover{
+    background-color: #fff;
+    color: black;
+    transition: 0.5s;
+    padding: 1.2em 1.7em;
+}

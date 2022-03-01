@@ -1,0 +1,37 @@
+.icon {
+    height: 45px;
+    border-radius: 8px;
+  
+    font-size: 30px;
+    padding: 3px;
+  }
+  .icon:hover {
+    background-color: rgb(43, 41, 41);
+    padding: 2px;
+    border-radius: 8px;
+    transition: 0.9s;
+  }
+  .footer-menu {
+    list-style: none;
+    margin-top: 10px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  .footer-menu:hover {
+    color: rgb(255, 170, 0);
+  }
+  .footer-input {
+    padding: 8px;
+    border: none;
+    outline: none;
+    background-color: rgb(255, 255, 255);
+  }
+  .footer-container {
+    background-color: #191919;
+    padding: 10px;
+    color: rgb(216, 209, 209);
+  }
+  .footer-phone-icon {
+    font-size: 30px;
+    color: rgb(255, 15, 15);
+  }
