@@ -20,7 +20,7 @@ const Products = () => {
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, dignissimos!
                             </Card.Text>
                         </Card.Body>
-                        <Card.Text> <hr className="text-secondary w-75 mx-auto" />
+                        <Card.Text className="text-secondary w-75 mx-auto">
                             <Button className="btn btn-dark  ms-2 m mb-5">Add To Cart</Button><Button className="btn btn-primary ms-2 d-btn mb-5">Details</Button>
                         </Card.Text>
                     </Card>
@@ -36,8 +36,8 @@ const Products = () => {
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, dignissimos!
                             </Card.Text>
                         </Card.Body>
-                        <Card.Text> <hr className="text-secondary w-75 mx-auto" />
-                            <Button className="btn btn-dark ms-2 m mb-5">Add To Cart</Button><Button className="btn btn-primary ms-2 d-btn mb-5">Details</Button>
+                        <Card.Text className="text-secondary w-75 mx-auto">
+                            <Button className="btn btn-dark  ms-2 m mb-5">Add To Cart</Button><Button className="btn btn-primary ms-2 d-btn mb-5">Details</Button>
                         </Card.Text>
                     </Card>
                     <Card className="work-card bg-light">
@@ -52,8 +52,8 @@ const Products = () => {
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, dignissimos!
                             </Card.Text>
                         </Card.Body>
-                        <Card.Text> <hr className="text-secondary w-75 mx-auto" />
-                            <Button className="btn btn-dark ms-2 m mb-5">Add To Cart</Button><Button className="btn btn-primary ms-2 d-btn mb-5">Details</Button>
+                        <Card.Text className="text-secondary w-75 mx-auto">
+                            <Button className="btn btn-dark  ms-2 m mb-5">Add To Cart</Button><Button className="btn btn-primary ms-2 d-btn mb-5">Details</Button>
                         </Card.Text>
                     </Card>
                 </CardGroup>
