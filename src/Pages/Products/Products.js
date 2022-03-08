@@ -13,8 +13,8 @@ const Products = () => {
     return (
         <div className="overflow-hidden bg-dark">
 
-            <h1 className="text-warning fw-bold text-center banner-title py-5">POPULAR FAST FOODS</h1>
-            <div className="container pt-2">
+            <h1 className="text-warning fw-bold text-center banner-title py-3">POPULAR FAST FOODS</h1>
+            <div className="container pt-2 mb-3">
                 <Row xs={1} md={3} className="g-3">
                     {
                         products.map(pd =>
@@ -22,15 +22,12 @@ const Products = () => {
                                 <Card className="work-card bg-light rounded-3">
                                     <Card.Img className="p-img" src={pd.image} />
                                     <Card.Body>
-                                        <Card.Text className="ps-4">
-
-                                        </Card.Text>
                                         <Card.Title className="text-warning fw-bold ps-4"><h4>{pd.name}</h4></Card.Title>
-                                        <Card.Title className="ps-4 text-dark">Price: {pd?.description.slice(0, 52)}...</Card.Title>
-                                        <Card.Title className="ps-4 text-dark">Price: ${pd.price} </Card.Title>
+                                        <Card.Title className=" text-dark">Price: {pd?.description.slice(0, 52)}...</Card.Title>
+                                        <Card.Title className=" pt-1 fw-bold text-dark">Price: ${pd.price} </Card.Title>
                                     </Card.Body>
                                     <Card.Text className="text-secondary w-75 mx-auto">
-                                        <Link to={`/orderNow/${pd._id}`}><Button className="btn btn-primary ms-2 d-btn mb-5">Details</Button></Link>
+                                        <Link to={`/orderNow/${pd._id}`}><Button className="btn btn-warning fw-semiBold d-btn mb-5">Details</Button></Link>
                                     </Card.Text>
                                 </Card>
                             </CardGroup>
