@@ -7,6 +7,7 @@ import AddProduct from './Pages/AddProduct/AddProduct';
 import Home from './Pages/Home/Home/Home';
 import Login from './Pages/Login/Login/Login';
 import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
+import ManageProducts from './Pages/ManageProducts/ManageProducts';
 import NotFound from './Pages/NotFound/NotFound';
 import OrderNow from './Pages/OrderNow/OrderNow';
 import Products from './Pages/Products/Products';
@@ -43,6 +44,9 @@ function App() {
             </PrivateRoute> */}
             <Route path="/orderNow/:productId">
               <OrderNow></OrderNow>
+            </Route>
+            <Route path="/manageProducts">
+              <ManageProducts></ManageProducts>
             </Route>
             <Route path="*">
               <NotFound></NotFound>
