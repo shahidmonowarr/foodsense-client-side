@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Button, Card, CardGroup, Row, } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import './Products.css'
 
 const Products = () => {
@@ -25,10 +26,11 @@ const Products = () => {
 
                                         </Card.Text>
                                         <Card.Title className="text-warning fw-bold ps-4"><h4>{pd.name}</h4></Card.Title>
+                                        <Card.Title className="ps-4 text-dark">Price: {pd?.description.slice(0, 52)}...</Card.Title>
                                         <Card.Title className="ps-4 text-dark">Price: ${pd.price} </Card.Title>
                                     </Card.Body>
                                     <Card.Text className="text-secondary w-75 mx-auto">
-                                        <Button className="btn btn-dark  ms-2 m mb-5">Add To Cart</Button><Button className="btn btn-warning ms-2 d-btn mb-5">Details</Button>
+                                        <Link to={`/orderNow/${pd._id}`}><Button className="btn btn-primary ms-2 d-btn mb-5">Details</Button></Link>
                                     </Card.Text>
                                 </Card>
                             </CardGroup>
