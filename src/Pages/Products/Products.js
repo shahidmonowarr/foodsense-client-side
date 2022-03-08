@@ -1,63 +1,40 @@
-import React from 'react';
-import { Button, Card, CardGroup, } from 'react-bootstrap';
+import React, { useEffect, useState } from 'react';
+import { Button, Card, CardGroup, Row, } from 'react-bootstrap';
+import './Products.css'
 
 const Products = () => {
+    const [products, setProducts] = useState([]);
+    useEffect(() => {
+        fetch("http://localhost:5000/products")
+            .then(res => res.json())
+            .then(data => setProducts(data))
+    }, [])
     return (
-        <div className="overflow-hidden pt-5 bg-dark">
+        <div className="overflow-hidden bg-dark">
+
             <h1 className="text-warning fw-bold text-center banner-title py-5">POPULAR FAST FOODS</h1>
             <div className="container pt-2">
+                <Row xs={1} md={3} className="g-3">
+                    {
+                        products.map(pd =>
+                            <CardGroup>
+                                <Card className="work-card bg-light rounded-3">
+                                    <Card.Img className="p-img" src={pd.image} />
+                                    <Card.Body>
+                                        <Card.Text className="ps-4">
 
-                <CardGroup>
-                    <Card className="work-card bg-light ms-2">
-                        <Card.Img className="p-img" src="https://themefie.com/html/foodka/assets/img/home-2/product/01.png" />
-                        <Card.Body>
-                            <Card.Text className="ps-4">
-
-                            </Card.Text>
-                            <Card.Title className="text-warning fw-bold ps-4"><h4>burger1</h4></Card.Title>
-                            <Card.Title className="ps-4 text-light">Price: </Card.Title>
-                            <Card.Text >
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, dignissimos!
-                            </Card.Text>
-                        </Card.Body>
-                        <Card.Text className="text-secondary w-75 mx-auto">
-                            <Button className="btn btn-dark  ms-2 m mb-5">Add To Cart</Button><Button className="btn btn-primary ms-2 d-btn mb-5">Details</Button>
-                        </Card.Text>
-                    </Card>
-                    <Card className="work-card bg-light">
-                        <Card.Img className="p-img" src="https://themefie.com/html/foodka/assets/img/home-2/product/01.png" />
-                        <Card.Body>
-                            <Card.Text className="ps-4">
-
-                            </Card.Text>
-                            <Card.Title className="text-warning fw-bold  ps-4"><h4>Burger:2</h4></Card.Title>
-                            <Card.Title className="ps-4 text-light">Price: </Card.Title>
-                            <Card.Text >
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, dignissimos!
-                            </Card.Text>
-                        </Card.Body>
-                        <Card.Text className="text-secondary w-75 mx-auto">
-                            <Button className="btn btn-dark  ms-2 m mb-5">Add To Cart</Button><Button className="btn btn-primary ms-2 d-btn mb-5">Details</Button>
-                        </Card.Text>
-                    </Card>
-                    <Card className="work-card bg-light">
-                        <Card.Img className="p-img" src="https://themefie.com/html/foodka/assets/img/home-2/product/01.png" />
-                        <Card.Body>
-                            <Card.Text className="ps-4">
-
-                            </Card.Text>
-                            <Card.Title className="text-warning fw-bold ps-4"><h4>Burger:2</h4></Card.Title>
-                            <Card.Title className="ps-4 text-light">Price: </Card.Title>
-                            <Card.Text >
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, dignissimos!
-                            </Card.Text>
-                        </Card.Body>
-                        <Card.Text className="text-secondary w-75 mx-auto">
-                            <Button className="btn btn-dark  ms-2 m mb-5">Add To Cart</Button><Button className="btn btn-primary ms-2 d-btn mb-5">Details</Button>
-                        </Card.Text>
-                    </Card>
-                </CardGroup>
-                )
+                                        </Card.Text>
+                                        <Card.Title className="text-warning fw-bold ps-4"><h4>{pd.name}</h4></Card.Title>
+                                        <Card.Title className="ps-4 text-dark">Price: ${pd.price} </Card.Title>
+                                    </Card.Body>
+                                    <Card.Text className="text-secondary w-75 mx-auto">
+                                        <Button className="btn btn-dark  ms-2 m mb-5">Add To Cart</Button><Button className="btn btn-warning ms-2 d-btn mb-5">Details</Button>
+                                    </Card.Text>
+                                </Card>
+                            </CardGroup>
+                        )
+                    }
+                </Row>
             </div>
         </div>
     );

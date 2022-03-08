@@ -3,7 +3,7 @@ import { Button, Col, Form, Row } from 'react-bootstrap';
 import './Contact.css';
 const Contact = () => {
     return (
-        <div>
+        <div id='contact'>
             <div className="container overflow-hidden">
                 <div className="contact-section">
                     <h1 className="mt-5 text-warning"><i className="far fa-address-book"></i> Contact With Us</h1>

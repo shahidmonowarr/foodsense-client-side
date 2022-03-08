@@ -4,6 +4,8 @@ import './Offer.css';
 const Offer = () => {
     return (
         <div className='container mt-5 mb-5'>
+            <h1 className="text-warning fw-bold text-center banner-title py-5">Surprising Offer!</h1>
+            <div className="container pt-2"></div>
             <div className="row">
                 <div className="col-sm offer-col1">
 

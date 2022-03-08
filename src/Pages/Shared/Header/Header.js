@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button, Container, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 import useAuth from '../../../contexts/useAuth';
 import './Header.css'
 const Header = () => {
@@ -13,12 +14,13 @@ const Header = () => {
                     <Navbar.Toggle />
                     <Navbar.Collapse >
                         <Nav className="ms-auto text-light">
-                            <Nav.Link to="/home#home">Home</Nav.Link>
-
-                            <Nav.Link to="/about">About Us</Nav.Link>
-                            <Nav.Link to="/addPackage">Services</Nav.Link>
-                            <Nav.Link to="/products">Products</Nav.Link>
-                            <Nav.Link to="/contact">Contact</Nav.Link>
+                            <Nav.Link as={HashLink} to="/home#home">Home</Nav.Link>
+                            <Nav.Link as={Link} to="/products">Products</Nav.Link>
+                            <Nav.Link as={Link} to="/addProduct">Add Product</Nav.Link>
+                            <Nav.Link as={HashLink} to="/home#contact">Contact</Nav.Link>
+                            {/* {user?.email &&
+                                <Nav.Link as={Link} to="/addProduct">Add Product</Nav.Link>
+                            } */}
                             {user?.email ?
                                 <Button onClick={logOut} variant="light" className="mx-3 bg-warning text-white">Logout</Button>
                                 :

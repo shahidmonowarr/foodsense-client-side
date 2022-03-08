@@ -11,7 +11,7 @@ const Footer = () => {
                     <div className="row">
                         <div className="col-md-4 col-sm-6">
                             <div className="left-container text-start"> <br /><br /><br />
-                                <h2 className=' text-light'>FOOD<span className='text-warning'>Sense</span></h2>
+                                <h2 className=' text-center text-light'>FOOD<span className='text-warning'>Sense</span></h2>
                                 <div className=""><hr />
                                     <div className="d-flex justify-content-center ">
 
