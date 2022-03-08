@@ -1,16 +1,39 @@
+import axios from 'axios';
 import React, { useEffect, useState } from 'react';
+import { useForm } from 'react-hook-form';
 import { useParams } from 'react-router-dom';
+import useAuth from '../../contexts/useAuth';
+
 
 const OrderNow = () => {
     const { productId, } = useParams();
     const [product, setProduct] = useState({});
+    const { register, handleSubmit, reset, formState: { errors } } = useForm();
+    const { user } = useAuth();
 
+    const onSubmit = data => {
+
+        const orderStatus = "pending";
+        data.orderStatus = orderStatus;
+
+        console.log(data);
+
+        axios.post('http://localhost:5000/orders', data)
+            .then(res => {
+                if (res.data.insertedId) {
+                    console.log(res.data)
+                    alert('Added Successfully');
+                    reset();
+                }
+            })
+    };
 
     useEffect(() => {
         fetch(`http://localhost:5000/products/${productId}`)
             .then(res => res.json())
             .then(data => setProduct(data));
-    }, [])
+    }, []);
+
     return (
         <div className="container">
             <h1 className="text-warning fw-bold text-center banner-title py-3">Provide Info to Confirm Order</h1>
@@ -22,7 +45,7 @@ const OrderNow = () => {
 
                     <img className="ps-5 w-100" src={product.image} alt="" />
                     <h3 className=" text-warning ps-5">{product.name}</h3>
-                    <h6 className='text-light ps-5'>BDT. {product.price}</h6>
+                    <h6 className='text-light ps-5'>$ {product.price}</h6>
                     <div className=" ps-5 my-3">
                         {/* <p className="my-3"><span className="bg-danger text-light p-1 rounded">{brand}</span></p> */}
                         <small className="text-muted">{product.description}</small>
@@ -30,17 +53,22 @@ const OrderNow = () => {
                     </div>
 
                 </div>
-                {/* <div className="col-md-7">
-                        <h3 className="bg-danger text-light ps-5">Fill the Address Form</h3>
-                        <form onSubmit={handleConfirm} className="customer-form">
-                            <input type="text" value={user.displayName} placeholder="Name" required />
-                            <input type="number" ref={phoneNumberRef} name="" id="" placeholder="Phone Number" required />
-                            <input type="email" value={user.email} placeholder="Email Address" required />
-                            <textarea type="text" ref={addressRef} placeholder="Home Address" required />
+                <div className="col-md-7 add-product">
+                    <form onSubmit={handleSubmit(onSubmit)} className="customer-form">
+                        <input defaultValue={user.displayName} {...register("name")} />
 
-                            <input className="order-btn" type="submit" value="Submit & confirm" />
-                        </form>
-                    </div> */}
+                        <input defaultValue={user.email} placeholder="Email" {...register("email", { required: true })} />
+
+                        {errors.email && <span className="error">This field is required</span>}
+
+                        <input placeholder="Price" defaultValue={product.price} {...register("price")} />
+                        <input placeholder="Product title" defaultValue={product.name} {...register("title")} />
+                        <input placeholder="Address" defaultValue="" {...register("address")} />
+
+                        <input placeholder="Phone No." defaultValue="" {...register("phone")} />
+                        <input className='submit-btn' type="submit" />
+                    </form>
+                </div>
             </div>
         </div>
     );
