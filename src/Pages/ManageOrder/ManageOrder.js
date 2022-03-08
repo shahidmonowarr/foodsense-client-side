@@ -5,7 +5,7 @@ const ManageOrder = () => {
     const [orders, setOrders] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/orders')
+        fetch('https://tranquil-harbor-40526.herokuapp.com/orders')
             .then(res => res.json())
             .then(data => setOrders(data));
     }, []);
@@ -14,7 +14,7 @@ const ManageOrder = () => {
         const matchedOrder = orders.filter(order => order._id == id);
         matchedOrder[0].orderStatus = 'Confirmed';
 
-        fetch(`http://localhost:5000/orders/${id}`, {
+        fetch(`https://tranquil-harbor-40526.herokuapp.com/${id}`, {
             method: "PUT",
             headers: {
                 'content-type': 'application/json'
@@ -31,7 +31,7 @@ const ManageOrder = () => {
     const handleDelete = id => {
         const proceed = window.confirm("Are You sure, You want to delete?");
         if (proceed) {
-            const url = `http://localhost:5000/orders/${id}`;
+            const url = `https://tranquil-harbor-40526.herokuapp.com/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })
