@@ -16,11 +16,17 @@ const Header = () => {
                         <Nav className="ms-auto text-light">
                             <Nav.Link as={HashLink} to="/home#home">Home</Nav.Link>
                             <Nav.Link as={Link} to="/products">Products</Nav.Link>
-                            <Nav.Link as={Link} to="/addProduct">Add Product</Nav.Link>
-                            <Nav.Link as={Link} to="/manageOrders">Manage Order</Nav.Link>
+                            {/* <Nav.Link as={Link} to="/addProduct">Add Product</Nav.Link> */}
+
                             <Nav.Link as={HashLink} to="/home#contact">Contact</Nav.Link>
-                            {/* {user?.email &&
+                            {user?.email &&
                                 <Nav.Link as={Link} to="/addProduct">Add Product</Nav.Link>
+                            }
+                            {user?.email &&
+                                <Nav.Link as={Link} to="/manageOrders">Manage Order</Nav.Link>
+                            }
+                            {/* {user?.email &&
+                                <Nav.Link as={Link} to="/manageProducts">Manage Product</Nav.Link>
                             } */}
                             {user?.email ?
                                 <Button onClick={logOut} variant="light" className="mx-3 bg-warning text-white">Logout</Button>

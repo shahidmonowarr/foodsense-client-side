@@ -34,21 +34,15 @@ function App() {
             <Route path="/products">
               <Products></Products>
             </Route>
-            {/* <PrivateRoute path="/addProduct">
+            <PrivateRoute path="/addProduct">
               <AddProduct></AddProduct>
-            </PrivateRoute> */}
-            <Route path="/addProduct">
-              <AddProduct></AddProduct>
-            </Route>
-            {/* <PrivateRoute path="/orderNow">
+            </PrivateRoute>
+            <PrivateRoute path="/orderNow/:productId">
               <OrderNow></OrderNow>
-            </PrivateRoute> */}
-            <Route path="/orderNow/:productId">
-              <OrderNow></OrderNow>
-            </Route>
-            <Route path="/manageProducts">
+            </PrivateRoute>
+            <PrivateRoute path="/manageProducts">
               <ManageProducts></ManageProducts>
-            </Route>
+            </PrivateRoute>
             <Route path='/manageOrders'>
               <ManageOrder></ManageOrder>
             </Route>
