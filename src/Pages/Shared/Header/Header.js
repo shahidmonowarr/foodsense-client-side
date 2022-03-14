@@ -10,10 +10,10 @@ const Header = () => {
         <>
             <Navbar bg="dark" variant="dark" sticky="top" expand="lg">
                 <Container>
-                    <Navbar.Brand className="fs-3 fw-bold" href="#home">Food<span className='text-warning'>Sense</span></Navbar.Brand>
+                    <Navbar.Brand className="fs-2 fw-bold" href="#home">Food<span className='text-warning'>Sense</span></Navbar.Brand>
                     <Navbar.Toggle />
                     <Navbar.Collapse >
-                        <Nav className="ms-auto text-light">
+                        <Nav className="ms-auto fw-bold text-light fs-5">
                             <Nav.Link as={HashLink} to="/home#home">Home</Nav.Link>
                             <Nav.Link as={Link} to="/products">Products</Nav.Link>
                             {/* <Nav.Link as={Link} to="/addProduct">Add Product</Nav.Link> */}
@@ -32,9 +32,13 @@ const Header = () => {
                                 <Button onClick={logOut} variant="light" className="mx-3 bg-warning text-white">Logout</Button>
                                 :
                                 <Nav.Link as={Link} to="/login">Login</Nav.Link>}
-                            <Navbar.Text>
+                            {user?.email ?
+                                <Navbar.Text>
                                 User: <a style={{ textDecoration: "none" }} href="#login"> {user?.displayName}</a>
                             </Navbar.Text>
+                                :
+                                <Nav.Link as={Link} to="/login"></Nav.Link>}
+                            
                         </Nav>
                     </Navbar.Collapse>
                 </Container>

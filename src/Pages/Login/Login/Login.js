@@ -5,8 +5,8 @@ const Login = () => {
     const { signInUsingGoogle } = useAuth();
     return (
         <div className="login-page">
-            <h2>Please Login</h2>
-            <button onClick={signInUsingGoogle} className="btn btn-primary">Google Sign In</button>
+             <h1 className="text-warning text-center banner-title py-3"><i className="far fa-address-book"></i> Please LogIn</h1>
+            <button onClick={signInUsingGoogle} className="btn font btn-warning mb-3 text-white  fs-5"><i class="fab fa-google text-danger"></i>oogle SignIn</button>
         </div>
     );
 };

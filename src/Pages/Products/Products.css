@@ -1,1 +1,18 @@
+.food 
 
+.food-name{
+    color: #3d2514;
+   font-family: 'Alfa Slab One', cursive;
+   font-size: 20px;
+   text-shadow: 4px 3px 8px #fff;
+}
+
+.description{
+    font-family: 'Alfa Slab One', cursive;
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.font{
+    font-family: 'Alfa Slab One', cursive;
+}

@@ -11,23 +11,24 @@
     margin: 1em 0 0;
     padding: 0;
     text-transform: uppercase;
-    font-size: 2.8em;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    line-height: 1.5em;
-    font-weight: 800;
+    font-size: 2.9em;
+    font-family: 'Alfa Slab One', cursive;
+    line-height: 1.7em;
 }
 
 .banner p{
     padding: 5px;
     color: rgb(235, 230, 230);
+    font-family: 'Alfa Slab One', cursive;
+    font-weight: 300;
 }
 
 .btn1{
     display: inline-block;
     margin: 1em 0 0;
     background-color: goldenrod;
-    color: white;
-    font-weight: 1000;
+    font-family: 'Alfa Slab One', cursive;
+    color: rgb(235, 221, 221);
     text-transform: uppercase;
     border: none;
     padding: 1em 1.5em;
@@ -35,8 +36,7 @@
 }
 
 .btn1:hover{
-    background-color: #fff;
+    background-color: rgb(236, 212, 212);
     color: black;
     transition: 0.5s;
-    padding: 1.2em 1.7em;
 }

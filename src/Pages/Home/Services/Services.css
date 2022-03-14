@@ -1,13 +1,14 @@
 .service-col{
     margin: 15px;
     padding: 15px 15px;
-    background-color: goldenrod;
+    background-color: rgb(255, 255, 255);
     border-radius: 20px;
     color: rgb(26, 22, 22);
 }
 
 .service-col:hover{
-    background-color: rgb(255, 255, 255);
+    
+    background-color: goldenrod;
     color: black;
     transition: 0.8s;
 }

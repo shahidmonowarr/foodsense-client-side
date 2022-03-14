@@ -5,11 +5,11 @@ import './Services.css';
 
 const Services = () => {
     return (
-        <div className='container mt-5 mb-5'>
+        <div className='container mt-5 mb-2'>
             <div className="row">
                 <div className="col-sm service-col">
                     <div><h3><FontAwesomeIcon icon={faCalendarCheck} /></h3></div>
-                    <div><h2>Mon-Fri: 10AM-9:30PM</h2> <h6>Working Hour</h6></div>
+                    <div><h2>Mon-Fri: 10-9PM</h2> <h6>Working Hour</h6></div>
 
                 </div>
                 <div className="col-sm service-col">

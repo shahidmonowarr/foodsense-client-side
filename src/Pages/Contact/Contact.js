@@ -6,7 +6,7 @@ const Contact = () => {
         <div id='contact'>
             <div className="container overflow-hidden">
                 <div className="contact-section">
-                    <h1 className="mt-5 text-warning"><i className="far fa-address-book"></i> Contact With Us</h1>
+                    <h1 className="text-warning text-center banner-title py-3"><i className="far fa-address-book"></i> Contact With Us</h1>
 
                     <div className="row contact">
                         <div className="col-md-6 col-sm-12">
