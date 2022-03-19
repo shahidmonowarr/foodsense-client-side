@@ -1,26 +1,17 @@
-.manage-orders{
+.manage-order{
     padding-top: 70px;
+    background-color: rgb(19, 18, 18);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height:100vh ;
-}
-.order-div{
-border: 2px;
-border-radius: 20px;
-transition: 0.5s;
-cursor: pointer;
-padding-bottom: 10px;
-}
-.orders-div{
-margin-top: 10px;
-margin-bottom: 10px;
-display: flex;
-align-items: center;
-justify-content: center;
+    height:100vh;
+
 }
 
-
-.order-div:hover{
-    box-shadow: 2px 5px 10px rgb(70, 64, 64);
+.btn-order{
+ border-radius: 15px;
+}
+.btn-order:hover{
+ background-color: rgb(255, 175, 25);
+ transition: 0.8s;
 }

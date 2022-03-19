@@ -12,7 +12,7 @@ const Services = () => {
                     <div><h2>Mon-Fri: 10-9PM</h2> <h6>Working Hour</h6></div>
 
                 </div>
-                <div className="col-md-6 col-lg-4 service-col">
+                <div className="col-md-6 col-lg-4 bg-warning service-col">
                     <div><h3><FontAwesomeIcon icon={faMapMarkedAlt} /></h3></div>
                     <div><h2>Mirpur-10 Dhaka</h2> <h6>Store Location</h6></div>
 

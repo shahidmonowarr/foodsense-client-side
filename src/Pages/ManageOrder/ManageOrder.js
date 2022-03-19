@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Table } from 'react-bootstrap';
 import './ManageOrder.css'
 
 const ManageOrder = () => {
@@ -49,19 +50,35 @@ const ManageOrder = () => {
     }
 
     return (
-        <div className="container manage-orders">
-            <h1 className="text-warning fw-bold text-center banner-title py-3">Update or Remove Orders</h1>
-            {
-                orders.map(order => <div className="orders-div" key={order._id}>
-                    <div className="order-div my-2 container">
-                        <h3 className="fw-bold text-white">{order.name} </h3>
-                        <h6 className="text-white ps-2"> Order Status: {order.orderStatus}</h6>
-                        <button className=" mx-2 rounded-3 submit-btn" onClick={() => handleConfirm(order._id)}> Confirm <i class="fas fa-angle-double-right"></i></button>
-                        <button className=" mx-2 submit-btn" onClick={() => handleDelete(order._id)}> Remove <i class="fas fa-angle-double-right"></i></button>
-                    </div>
-                </div>)
-            }
+        <div className=" manage-order" >
+        <div className="container">
+        <h1 className="text-warning fw-bold text-center banner-title py-3">Update or Remove Orders</h1>
+            <Table striped bordered hover variant="dark">
+                <thead>
+                    <tr className="bg-dark text-white">
+                        <th>Customer Name</th>
+                        <th>Product Name</th>
+                        <th>Order Status</th>
+                        <th>Approve</th>
+                        <th>Remove</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {
+                        orders.map((order) => (
+                            <tr key={order._id}>
+                                <td>{order.name}</td>
+                                <td>{order.title}</td>
+                                <td>{order.orderStatus}</td>
+                                <td><button className='btn-order' onClick={() => handleConfirm(order._id)}> <i class="fas fa-check-circle"></i></button></td>
+                                <td><button className='btn-order' onClick={() => handleDelete(order._id)}> <i class="fas fa-trash-alt"></i></button></td>
+                            </tr>
+                        ))
+                    }
+                </tbody>
+            </Table>
         </div>
+    </div>
     );
 };
 
