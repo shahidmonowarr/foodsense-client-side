@@ -19,7 +19,7 @@ const Products = () => {
                     {
                         products.map(pd =>
                             <CardGroup>
-                                <Card className="work-card bg-light rounded-3">
+                                <Card className="product-card rounded-3">
                                     <Card.Img className="p-img" src={pd.image} />
                                     <Card.Body className='food'>
                                         <Card.Title className="food-name fw-bold ps-4"><h4>{pd.name}</h4></Card.Title>

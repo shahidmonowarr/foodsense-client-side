@@ -16,3 +16,7 @@
 .font{
     font-family: 'Alfa Slab One', cursive;
 }
+
+.product-card{
+    background-color: rgb(218, 202, 202);
+}

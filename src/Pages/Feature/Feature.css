@@ -1,0 +1,16 @@
+.collapse-btn {
+    cursor: pointer;
+    color: #5796fb;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+}
+.arrow-style {
+    color: white;
+    padding: 0px 6px;
+    background-color: rgb(80, 235, 80);
+    margin-left: 20px;
+    border-radius: 50%;
+    font-size: 32px !important;
+    cursor: pointer;
+}

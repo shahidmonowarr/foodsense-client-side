@@ -1,0 +1,16 @@
+.item-style{
+    background-color: rgb(209, 191, 191);
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.collapse-btn{
+    color: rgb(187, 137, 0);
+    padding: 0 0 10px 30px;
+    
+}
+.collapse-btn:hover{
+    color: #3d2514;
+    transition: 0.5s;
+}
+
