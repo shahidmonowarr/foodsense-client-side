@@ -1,7 +1,7 @@
 .offer-col1{
     position: relative;
     background: url(https://i.ibb.co/mvpLTXP/2.png);
-    min-height: 60vh;
+    min-height: 50vh;
     padding-top:20px ;
     background-size: cover;
     background-position: center;
@@ -14,7 +14,7 @@
     position: relative;
     background: url(
     https://i.ibb.co/cgVPgbN/3.png);
-    min-height: 60vh;
+    min-height: 50vh;
     padding-top:20px ;
     background-size: cover;
     background-position: center;
@@ -26,7 +26,7 @@
     position: relative;
     background: url(https://i.ibb.co/VJhjjmr/4.png
     );
-    min-height: 60vh;
+    min-height: 50vh;
     padding-top:20px ;
     background-size: cover;
     background-position: center;
@@ -58,14 +58,14 @@
     font-weight: 800;
 }
 .offer-col1:hover{
-    transform: scale(1.1);
-    transition: 0.8s;
+    transform: scale(0.9);
+    transition: 1.0s;
 }
 .offer-col2:hover{
-    transform: scale(1.1);
-    transition: 0.8s;
+    transform: scale(0.9);
+    transition: 1.0s;
 }
 .offer-col3:hover{
-    transform: scale(1.1);
-    transition: 0.8s;
+    transform: scale(0.9);
+    transition: 1.0s;
 }
