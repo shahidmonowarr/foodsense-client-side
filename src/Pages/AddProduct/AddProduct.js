@@ -1,6 +1,6 @@
+import axios from 'axios';
 import React from 'react';
 import { useForm } from "react-hook-form";
-import axios from 'axios';
 import './AddProduct.css';
 
 const AddProduct = () => {
@@ -8,7 +8,7 @@ const AddProduct = () => {
     const onSubmit = data => {
         console.log(data);
 
-        axios.post('https://tranquil-harbor-40526.herokuapp.com/products', data)
+        axios.post('https://foodsense-server.vercel.app/products', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('Added Successfully');

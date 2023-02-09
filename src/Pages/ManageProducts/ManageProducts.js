@@ -1,17 +1,16 @@
 import React, { useEffect, useState } from 'react';
-import { NavLink } from 'react-bootstrap';
 
 const ManageProducts = () => {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
-        fetch('https://tranquil-harbor-40526.herokuapp.com/products/')
+        fetch('https://foodsense-server.vercel.app/products/')
             .then(res => res.json())
             .then(data => setProducts(data))
     }, []);
 
     const handleDelete = id => {
-        const url = `https://tranquil-harbor-40526.herokuapp.com/products/${id}`;
+        const url = `https://foodsense-server.vercel.app/products/${id}`;
         fetch(url, {
             method: 'DELETE'
         })

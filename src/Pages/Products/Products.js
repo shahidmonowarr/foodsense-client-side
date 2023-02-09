@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import { Button, Card, CardGroup, Row, } from 'react-bootstrap';
+import { Button, Card, CardGroup, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import './Products.css';
 
 const Products = () => {
     const [products, setProducts] = useState([]);
     useEffect(() => {
-        fetch("https://tranquil-harbor-40526.herokuapp.com/products")
+        fetch("https://foodsense-server.vercel.app/products")
             .then(res => res.json())
             .then(data => setProducts(data))
     }, [])

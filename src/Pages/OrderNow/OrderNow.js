@@ -18,7 +18,7 @@ const OrderNow = () => {
 
         console.log(data);
 
-        axios.post('https://tranquil-harbor-40526.herokuapp.com/orders', data)
+        axios.post('https://foodsense-server.vercel.app/orders', data)
             .then(res => {
                 if (res.data.insertedId) {
                     console.log(res.data)
@@ -29,7 +29,7 @@ const OrderNow = () => {
     };
 
     useEffect(() => {
-        fetch(`https://tranquil-harbor-40526.herokuapp.com/products/${productId}`)
+        fetch(`https://foodsense-server.vercel.app/products/${productId}`)
             .then(res => res.json())
             .then(data => setProduct(data));
     }, []);

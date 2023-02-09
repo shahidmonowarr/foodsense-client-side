@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { Table } from 'react-bootstrap';
-import './ManageOrder.css'
+import './ManageOrder.css';
 
 const ManageOrder = () => {
     const [orders, setOrders] = useState([]);
 
     useEffect(() => {
-        fetch('https://tranquil-harbor-40526.herokuapp.com/orders')
+        fetch('https://foodsense-server.vercel.app/orders')
             .then(res => res.json())
             .then(data => setOrders(data));
     }, []);
@@ -15,7 +15,7 @@ const ManageOrder = () => {
         const matchedOrder = orders.filter(order => order._id == id);
         matchedOrder[0].orderStatus = 'Confirmed';
 
-        fetch(`https://tranquil-harbor-40526.herokuapp.com/${id}`, {
+        fetch(`https://foodsense-server.vercel.app/${id}`, {
             method: "PUT",
             headers: {
                 'content-type': 'application/json'
@@ -32,7 +32,7 @@ const ManageOrder = () => {
     const handleDelete = id => {
         const proceed = window.confirm("Are You sure, You want to delete?");
         if (proceed) {
-            const url = `https://tranquil-harbor-40526.herokuapp.com/${id}`;
+            const url = `https://foodsense-server.vercel.app/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })
